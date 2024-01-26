@@ -1,0 +1,45 @@
+.main {
+  background-image: url("../../assets/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60007d;
+}
+
+.section {
+  width: 509px;
+  background-color: #edd2f4;
+  display: flex;
+  justify-content: center;
+  border-radius: 47px;
+}
+
+.container {
+  margin: 39px 0px;
+}
+
+.form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 400px;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 28px;
+}
+
+.p {
+  width: 315px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
