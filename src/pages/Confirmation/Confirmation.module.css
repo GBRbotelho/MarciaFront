@@ -1,0 +1,37 @@
+.main {
+  background-image: url("../../assets/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60007d;
+}
+
+.section {
+  width: 582px;
+  height: 659px;
+  background-color: #edd2f4;
+  display: flex;
+  justify-content: center;
+  border-radius: 47px;
+}
+
+.div {
+  margin: 50px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div p {
+  font-size: 17px;
+}
+
+.codigo {
+  margin-top: -120px;
+}

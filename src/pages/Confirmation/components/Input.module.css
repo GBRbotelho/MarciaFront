@@ -1,0 +1,21 @@
+.input {
+  width: 398px;
+}
+
+.input label {
+  font-size: 15.5px;
+  margin-left: 5px;
+}
+
+.div {
+  display: flex;
+  gap: 10px;
+}
+
+.div input {
+  width: 18px;
+  background-color: #edd2f4;
+  border: 0px;
+  border-bottom: 3px solid;
+  border-color: #60007d;
+}
