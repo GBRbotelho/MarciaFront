@@ -33,8 +33,7 @@ export default function Home() {
               state={user}
               setState={setUser}
             />
-            <p></p>
-            <div>
+            <div className={styles.button}>
               <Button text="CADASTRAR" state={user} />
               <p className={styles.p}>
                 Ao continuar, você <b>concorda</b> com os{" "}

@@ -9,6 +9,7 @@ export default function Login() {
     email: "",
     password: "",
   });
+
   return (
     <main className={styles.main}>
       <section className={styles.section}>
