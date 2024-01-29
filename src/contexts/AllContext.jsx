@@ -1,8 +1,11 @@
 import React from "react";
 import { FlashMessageProvider } from "./FlashMessageContext";
+import { AuthProvider } from "./AuthContext";
 
 const AllContextsProvider = ({ children }) => (
-  <FlashMessageProvider>{children}</FlashMessageProvider>
+  <AuthProvider>
+    <FlashMessageProvider>{children}</FlashMessageProvider>
+  </AuthProvider>
 );
 
 export default AllContextsProvider;
