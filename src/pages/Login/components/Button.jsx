@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./Button.module.css";
 import { usePost } from "../../../hooks/useRequest";
 import { useFlashMessage } from "../../../contexts/FlashMessageContext";
-import { login } from "../../../contexts/AuthContext";
+import { useAuth } from "../../../contexts/AuthContext";
 
 export default function Button({ text, state }) {
   const showMessage = useFlashMessage();
+  const { login } = useAuth();
 
   const handleSubmit = async () => {
     const response = await login(state);

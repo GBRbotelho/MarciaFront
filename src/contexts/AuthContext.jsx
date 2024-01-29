@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { usePost } from "../hooks/useRequest";
 
 const AuthContext = createContext();
 
@@ -33,6 +34,8 @@ export const AuthProvider = ({ children }) => {
   //     checkToken();
   //   }, [token]);
 
+  const getDataUser = async () => {};
+
   const login = async (userData) => {
     try {
       const response = await usePost("api/users/login", userData);
@@ -55,10 +58,10 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
+        login,
         token,
         user,
         logout,
-        login,
       }}
     >
       {children}
