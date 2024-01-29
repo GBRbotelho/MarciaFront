@@ -3,6 +3,7 @@ import styles from "./Login.module.css";
 import InputEmail from "./components/InputEmail";
 import InputPassword from "./components/InputPassword";
 import Button from "./components/Button";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -25,7 +26,12 @@ export default function Login() {
           <div className={styles.button}>
             <Button text="ENTRAR" state={user} />
             <p>
-              não tem cadasto ainda ?? <b>criar conta</b>
+              não tem cadasto ainda ??{" "}
+              <b>
+                <Link to="/cadastro" className={styles.link}>
+                  criar conta
+                </Link>
+              </b>
             </p>
           </div>
         </div>

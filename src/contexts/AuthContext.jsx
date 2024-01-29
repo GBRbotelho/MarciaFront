@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { usePost } from "../hooks/useRequest";
+import { useGet, usePost } from "../hooks/useRequest";
 
 const AuthContext = createContext();
 
@@ -34,17 +34,31 @@ export const AuthProvider = ({ children }) => {
   //     checkToken();
   //   }, [token]);
 
-  const getDataUser = async () => {};
+  const getDataUser = async (token) => {
+    try {
+      const response = await useGet("api/users/token");
+      if (response.success === true) {
+        setUser(response.data);
+      }
+      return response;
+    } catch (error) {
+      console.error("Erro ao buscar dados do usuario:", error);
+      setUser(false);
+      return { success: false, message: "Erro ao buscar dados do Usuario" };
+    }
+  };
 
   const login = async (userData) => {
     try {
       const response = await usePost("api/users/login", userData);
       if (response.success === true) {
         localStorage.setItem("token", response.data);
+        setToken(true);
       }
       return response;
     } catch (error) {
       console.error("Erro ao realizar login:", error);
+      setToken(false);
       return { success: false, message: "Erro ao realizar login" };
     }
   };
@@ -59,6 +73,7 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         login,
+        getDataUser,
         token,
         user,
         logout,
