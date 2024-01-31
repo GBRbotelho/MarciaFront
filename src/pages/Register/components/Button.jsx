@@ -6,7 +6,6 @@ export default function Button({ text, state }) {
   const handleSubmit = async () => {
     const response = await usePost("api/users", state);
     console.log(response);
-    console.log(state);
   };
 
   return (

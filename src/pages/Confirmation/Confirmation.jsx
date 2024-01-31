@@ -4,7 +4,7 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 
 export default function Confirmation() {
-  const [code, setCode] = useState([]);
+  const [code, setCode] = useState(["", "", "", "", "", ""]);
 
   return (
     <main className={styles.main}>
