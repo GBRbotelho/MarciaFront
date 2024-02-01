@@ -21,6 +21,12 @@ export default function Home() {
         </div>
         <div className={styles.cards}>
           <NewSystem />
+          <NewSystem />
+          <NewSystem />
+          <NewSystem />
+          <NewSystem />
+          <NewSystem />
+          <NewSystem />
         </div>
       </section>
     </main>

@@ -5,7 +5,7 @@ export default function Notification() {
   return (
     <div className={styles.notification}>
       <button>
-        <i class="ri-notification-2-fill"></i>
+        <i className="ri-notification-2-fill"></i>
       </button>
     </div>
   );

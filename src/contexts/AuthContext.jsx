@@ -11,30 +11,32 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState("null");
   const [user, setUser] = useState("null");
 
-  //   useEffect(() => {
-  //     const checkToken = async () => {
-  //       const tokenRenewed = await verifyToken();
-  //       if (!tokenRenewed) {
-  //         setToken("NO");
-  //         localStorage.removeItem("token");
-  //       }
-  //       if (tokenRenewed.error) {
-  //         setToken("NO");
-  //         localStorage.removeItem("token");
-  //       }
+  useEffect(() => {
+    const checkToken = async () => {
+      const localToken = localStorage.getItem("token");
 
-  //       if (!tokenRenewed.error) {
-  //         setToken(tokenRenewed.token);
-  //         const userData = await useGetUserData(tokenRenewed.token);
-  //         setUser(userData);
-  //       }
-  //       setIsLoading(false);
-  //     };
+      const tokenRenewed = await usePost("api/users/refresh", {
+        token: localToken,
+      });
 
-  //     checkToken();
-  //   }, [token]);
+      if (tokenRenewed.success === false) {
+        localStorage.removeItem("token");
+        setToken("NO");
+        setUser("NO");
+      }
 
-  const getDataUser = async (token) => {
+      if (tokenRenewed.success) {
+        setToken("YES");
+        localStorage.setItem("token");
+        const userData = await getDataUser();
+        setUser(userData);
+      }
+    };
+
+    checkToken();
+  }, [token]);
+
+  const getDataUser = async () => {
     try {
       const response = await useGet("api/users/token");
       if (response.success === true) {
@@ -53,20 +55,20 @@ export const AuthProvider = ({ children }) => {
       const response = await usePost("api/users/login", userData);
       if (response.success === true) {
         localStorage.setItem("token", response.data);
-        setToken(true);
+        setToken("YES");
       }
       return response;
     } catch (error) {
       console.error("Erro ao realizar login:", error);
-      setToken(false);
+      setToken("NO");
       return { success: false, message: "Erro ao realizar login" };
     }
   };
 
   const logout = () => {
     localStorage.removeItem("token");
-    setToken(null);
-    setUser(null);
+    setToken("NO");
+    setUser("NO");
   };
 
   return (

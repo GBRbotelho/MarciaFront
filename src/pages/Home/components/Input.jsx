@@ -6,7 +6,7 @@ export default function Input() {
     <div className={styles.div}>
       <input type="text" className={styles.input} placeholder="Buscar" />
       <button className={styles.button}>
-        <i class="ri-search-line"></i>
+        <i className="ri-search-line"></i>
       </button>
     </div>
   );
