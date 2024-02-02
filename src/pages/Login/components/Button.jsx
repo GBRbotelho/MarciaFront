@@ -11,8 +11,11 @@ export default function Button({ text, state }) {
   const { login, getDataUser, user } = useAuth();
 
   useEffect(() => {
-    if (user.isEmailVerified === "NO") {
+    if (user && user.isEmailVerified === "NO") {
       navigate("/confirmacao");
+    }
+    if (user && user.isEmailVerified === "YES") {
+      navigate("/home");
     }
   }, [user]);
 

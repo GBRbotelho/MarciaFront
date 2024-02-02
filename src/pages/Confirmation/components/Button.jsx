@@ -3,10 +3,12 @@ import styles from "./Button.module.css";
 import { usePost } from "../../../hooks/useRequest";
 import { useFlashMessage } from "../../../contexts/FlashMessageContext";
 import { useAuth } from "../../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Button({ text, state }) {
   const { user } = useAuth();
   const showMessage = useFlashMessage();
+  const navigate = useNavigate();
 
   const joinDigits = () => {
     return state.join("");
@@ -20,6 +22,7 @@ export default function Button({ text, state }) {
       });
       if (response.success === true) {
         showMessage(response.message, "success");
+        navigate("/home");
       } else {
         showMessage(
           response.message || "Erro interno, tente novamente!",
