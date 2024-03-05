@@ -13,7 +13,7 @@ export default function InputPassword({ id, state, setState }) {
         <i class="ri-lock-2-fill"></i>
         <b>Senha</b>
       </label>
-      <input value={state[id]} onChange={handleChange} />
+      <input type="password" value={state[id]} onChange={handleChange} />
     </div>
   );
 }
