@@ -17,6 +17,9 @@
   border-radius: 6px;
   background-color: #edd2f4;
   padding-left: 15px;
+  color: #60007d;
+  font-size: 18px;
+  font-family: "Open Sans";
 }
 
 .input i {

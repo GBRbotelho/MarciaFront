@@ -7,4 +7,12 @@
   font-size: 18px;
   border: 0px;
   border-radius: 6px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #d8a9e4;
+  color: #60007d;
+  transform: translateY(-5px);
 }
