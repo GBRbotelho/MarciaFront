@@ -13,9 +13,23 @@
   border: 2px solid;
   border-color: #60007d;
   border-radius: 6px;
+  transition: 0.2s;
 }
 
 .label {
   margin-top: 10px;
   font-weight: 400;
+  transition: 0.2s;
+}
+
+.div:hover .card {
+  background-color: #d8a9e4;
+  color: #60007d;
+  transform: translateY(-5px) scale(1.05);
+  cursor: pointer;
+}
+
+.div:hover .label {
+  transform: translateY(-5px) scale(1.05);
+  cursor: pointer;
 }

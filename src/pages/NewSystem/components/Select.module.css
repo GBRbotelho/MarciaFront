@@ -1,0 +1,19 @@
+.select {
+  width: 100%;
+}
+
+.select label {
+  font-size: 15.5px;
+  margin-left: 5px;
+}
+
+.select select {
+  padding: 0;
+  height: 37px;
+  width: 100%;
+  border: #60007d solid 2px;
+  border-radius: 6px;
+  background-color: #edd2f4;
+  padding-left: 15px;
+  color: #60007d;
+}

@@ -7,4 +7,12 @@
   font-size: 20px;
   border: 0px;
   border-radius: 6px;
+  transition: 0.1s;
+}
+
+.button:hover {
+  background-color: #d8a9e4;
+  color: #60007d;
+  transform: translateY(-5px) scale(1.05);
+  cursor: pointer;
 }

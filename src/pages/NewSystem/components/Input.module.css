@@ -1,5 +1,6 @@
 .input {
   width: 100%;
+  position: relative;
 }
 
 .input label {
@@ -15,4 +16,16 @@
   border-radius: 6px;
   background-color: #edd2f4;
   padding-left: 15px;
+  color: #60007d;
+  font-size: 20px;
+}
+
+.spanPrice {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
