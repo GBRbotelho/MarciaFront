@@ -25,7 +25,7 @@ export default function Select({
       <label>{label}</label>
       <select value={state[id]} onChange={handleChange}>
         {plans.map((plan) => {
-          return <option value={plan.id}>{plan.name}</option>;
+          return <option value={plan.id}>{plan.title}</option>;
         })}
       </select>
     </div>

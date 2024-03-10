@@ -8,6 +8,7 @@ export default function NewSystem() {
   const plans = [
     {
       id: 1,
+      title: "Plano Basico",
       name: "STARTER",
       description:
         "O plano perfeito para negócios que estão começando e para você que quer conhecer mais sobre a Marcia",
@@ -22,6 +23,7 @@ export default function NewSystem() {
     },
     {
       id: 2,
+      title: "Plano Medio",
       name: "BASIC",
       description:
         "O plano perfeito para negócios que estão começando e para você que quer conhecer mais sobre a Marcia",
@@ -36,6 +38,7 @@ export default function NewSystem() {
     },
     {
       id: 3,
+      title: "Plano Pro",
       name: "PLUS",
       description:
         "O plano perfeito para negócios que estão começando e para você que quer conhecer mais sobre a Marcia",
