@@ -24,12 +24,11 @@ export const AuthProvider = ({ children }) => {
         setToken("NO");
         setUser("NO");
       }
-
+      console.log(tokenRenewed);
       if (tokenRenewed.success) {
         setToken("YES");
-        localStorage.setItem("token");
-        const userData = await getDataUser();
-        setUser(userData);
+        localStorage.setItem("token", tokenRenewed.data);
+        await getDataUser();
       }
     };
 

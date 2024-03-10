@@ -17,10 +17,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(userData);
-    console.log("Passou");
     const response = await login(userData);
-    console.log(response);
     if (response.success === true) {
       showMessage(response.message, "success");
       await getData(response.data);
@@ -61,7 +58,7 @@ export default function Login() {
               handleSubmit={handleSubmit}
             />
             <p>
-              não tem cadasto ainda ??{" "}
+              Não tem cadasto ainda?{" "}
               <b>
                 <Link to="/cadastro" className={styles.link}>
                   criar conta

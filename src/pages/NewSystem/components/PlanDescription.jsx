@@ -11,8 +11,8 @@ export default function PlanDescription({ plans, planSelect }) {
         <h2>{plan.name}</h2>
         <p>{plan.description}</p>
         <ul>
-          {plan.options.map((option) => (
-            <li>{option}</li>
+          {plan.options.map((option, index) => (
+            <li key={`${index}`}>{option}</li>
           ))}
         </ul>
       </div>
