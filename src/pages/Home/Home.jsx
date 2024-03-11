@@ -17,9 +17,10 @@ export default function Home() {
       const response = await useGet(`api/companies/admin/${user._id}`);
       setSystems(response.data);
     };
-
-    FetchSystems();
-  }, []);
+    if (user._id) {
+      FetchSystems();
+    }
+  }, [user]);
 
   return (
     <main className={styles.main}>
@@ -35,7 +36,14 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.cards}>
-          {systems && systems.map((system) => <System name={system.name} />)}
+          {systems &&
+            systems.map((system) => (
+              <System
+                key={system._id}
+                name={system.name}
+                systemId={system._id}
+              />
+            ))}
           <NewSystem />
         </div>
       </section>

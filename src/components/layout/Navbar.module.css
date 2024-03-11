@@ -1,0 +1,8 @@
+.nav {
+  background-color: #60007d;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75px;
+}

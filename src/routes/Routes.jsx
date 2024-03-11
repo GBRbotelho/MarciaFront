@@ -7,6 +7,7 @@ import Confirmation from "../pages/Confirmation/Confirmation";
 import Home from "../pages/Home/Home";
 import ProtectRoute from "./ProtectRoute";
 import NewSystem from "../pages/NewSystem/NewSystem";
+import DashboardRoutes from "./DashboardRoutes";
 
 function Routes() {
   return (
@@ -37,6 +38,7 @@ function Routes() {
           </ProtectRoute>
         }
       />
+      <Route path="/dashboard/:id/*" element={<DashboardRoutes />} />
     </Router>
   );
 }
