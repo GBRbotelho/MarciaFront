@@ -9,6 +9,7 @@ function DashboardLayout({ children }) {
       <Navbar />
       <div className={styles.containerPage}>
         <Header />
+        {children}
       </div>
     </main>
   );

@@ -1,0 +1,8 @@
+.column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #edd2f4;
+  border-radius: 10px;
+}
