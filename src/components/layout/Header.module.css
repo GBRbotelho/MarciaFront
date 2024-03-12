@@ -9,6 +9,7 @@
 
 .container {
   width: 95%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -16,4 +17,32 @@
 .container h2 {
   margin: 0px;
   font-size: 30px;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu span {
+  height: 60%;
+}
+
+.menu span svg {
+  height: 100%;
+  width: 100%;
+}
+
+.menu button {
+  height: 80%;
+  background-color: #f5eaf8;
+  border: 0;
+  padding: 0px;
+}
+
+.menu button svg {
+  height: 100%;
+  width: 100%;
 }

@@ -7,6 +7,8 @@ import Calendario from "../../../../components/icons/Calendario";
 import Plus from "../../../../components/icons/Plus";
 import Raio from "../../../../components/icons/Raio";
 import Clock from "../../../../components/icons/Clock";
+import SetaDireta from "../../../../components/icons/SetaDireta";
+import SetaEsquerda from "../../../../components/icons/SetaEsquerda";
 
 export default function Agendamento() {
   const [activeFilter, setActiveFilter] = useState("Principais (18)");
@@ -40,9 +42,9 @@ export default function Agendamento() {
             <button />
           </div>
           <div className={styles.period}>
-            <h2>{"<"}</h2>
+            <SetaEsquerda />
             <span>27/12 - 02/01</span>
-            <h2>{">"}</h2>
+            <SetaDireta />
           </div>
           <div className={styles.buttons}>
             <button>
