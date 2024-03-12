@@ -1,6 +1,7 @@
 import { Routes as Router, Route } from "react-router-dom";
 import DashboardLayout from "../pages/@DashboardPages/DashboardLayout";
 import Agendamento from "../pages/@DashboardPages/Pages/Agendamento/Agendamento";
+import ProtectRoute from "./ProtectRoute";
 
 function DashboardRoutes() {
   return (
@@ -8,9 +9,11 @@ function DashboardRoutes() {
       <Route
         path="/"
         element={
-          <DashboardLayout>
-            <Agendamento />
-          </DashboardLayout>
+          <ProtectRoute>
+            <DashboardLayout>
+              <Agendamento />
+            </DashboardLayout>
+          </ProtectRoute>
         }
       />
     </Router>

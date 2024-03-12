@@ -4,3 +4,8 @@ body {
   font-family: "Open Sans";
   color: #60007d;
 }
+
+html,
+body {
+  height: 100%;
+}

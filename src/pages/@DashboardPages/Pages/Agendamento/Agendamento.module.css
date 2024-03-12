@@ -1,5 +1,6 @@
 .content {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -8,7 +9,6 @@
 .content section {
   margin-top: 0.5%;
   width: 1710px;
-  height: 700px;
 }
 
 .title {
@@ -48,6 +48,7 @@
   border-bottom: 5px solid #60007d;
   z-index: 3;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .controller {
@@ -91,6 +92,30 @@
   background-color: #ffffff;
   border: 1px #60007d solid;
   border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  background-color: #60007d;
+}
+
+.buttons button:hover svg {
+  color: #ffffff;
+}
+
+.buttons button img {
+  width: 90%;
+  height: 90%;
+}
+
+.buttons button svg {
+  width: 90%;
+  height: 90%;
+  color: #60007d;
 }
 
 .hidden {
@@ -99,7 +124,7 @@
 
 .columns {
   width: 100%;
-  height: 100%;
+  height: 700px;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(7, minmax(0, 1fr));
