@@ -16,6 +16,16 @@ function DashboardRoutes() {
           </ProtectRoute>
         }
       />
+      <Route
+        path="/clientes"
+        element={
+          <ProtectRoute>
+            <DashboardLayout>
+              <Agendamento />
+            </DashboardLayout>
+          </ProtectRoute>
+        }
+      />
     </Router>
   );
 }

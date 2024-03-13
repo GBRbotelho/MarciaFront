@@ -6,11 +6,13 @@ import Perfil from "../icons/Perfil";
 
 export default function Header() {
   const { user } = useAuth();
+  const pathSegments = location.pathname.split("/");
+  const currentSegment = pathSegments[3] || "Agendamentos";
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <h2>Agendamentos</h2>
+        <h2>{currentSegment}</h2>
         <div className={styles.menu}>
           <p>Ola, {user.name}</p>
           <span>

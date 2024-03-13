@@ -17,6 +17,7 @@
 .container h2 {
   margin: 0px;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .menu {
