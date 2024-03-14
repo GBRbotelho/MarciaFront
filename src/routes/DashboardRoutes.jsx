@@ -2,6 +2,7 @@ import { Routes as Router, Route } from "react-router-dom";
 import DashboardLayout from "../pages/@DashboardPages/DashboardLayout";
 import Agendamento from "../pages/@DashboardPages/Pages/Agendamento/Agendamento";
 import ProtectRoute from "./ProtectRoute";
+import Clientes from "../pages/@DashboardPages/Pages/Clientes/Clientes";
 
 function DashboardRoutes() {
   return (
@@ -21,7 +22,7 @@ function DashboardRoutes() {
         element={
           <ProtectRoute>
             <DashboardLayout>
-              <Agendamento />
+              <Clientes />
             </DashboardLayout>
           </ProtectRoute>
         }

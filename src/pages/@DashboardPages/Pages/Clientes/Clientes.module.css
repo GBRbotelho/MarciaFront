@@ -1,0 +1,141 @@
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.content section {
+  margin-top: 13px;
+  width: 1710px;
+}
+
+.filtros {
+  width: 100%;
+  border-bottom: 5px solid #f5eaf8;
+}
+
+.filtros ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+  margin: 0px;
+  bottom: -5px;
+  padding: 0px;
+  gap: 10px;
+}
+
+.filtros ul li {
+  padding: 0 20px;
+  border-bottom: 5px solid transparent;
+  transition: 0.2s;
+}
+
+.filtros ul li:not(.active):hover {
+  border-bottom: 5px solid #edd2f4;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.filtros .active {
+  border-bottom: 5px solid #60007d;
+  z-index: 3;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tableOptions {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.buttonFilter {
+  background-color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60007d;
+  font-weight: 600;
+  gap: 5px;
+  border: 1px solid #60007d;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.buttonFilter:hover {
+  background-color: #60007d;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.buttonFilter svg {
+  width: 28px;
+}
+
+.containerTable {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.containerTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.containerTable thead tr {
+  background-color: #60007d;
+  border-radius: 20px;
+}
+
+.containerTable thead th {
+  color: #ffffff;
+  font-size: 18px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
+.containerTable th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.containerTable th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.containerTable tbody tr {
+  background-color: #f5eaf8;
+  font-size: 18px;
+}
+
+.containerTable tbody td {
+  border-top: #ffffff 10px solid;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.containerTable tbody td svg {
+  width: 28px;
+  height: min-content;
+  padding: 0 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.containerTable tbody td svg:last-child {
+  width: 19px;
+  height: min-content;
+  transform: scale(1.4);
+}
+
+.containerTable tbody td svg:hover {
+  transform: scale(1.3);
+}
+
+.containerTable tbody td svg:last-child:hover {
+  transform: scale(1.5);
+}

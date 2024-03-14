@@ -7,12 +7,11 @@
 }
 
 .content section {
-  margin-top: 0.5%;
   width: 1710px;
 }
 
 .title {
-  margin-top: 13px;
+  margin: 13px 0px;
   font-size: 23px;
 }
 

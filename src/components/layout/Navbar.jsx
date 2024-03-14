@@ -19,12 +19,16 @@ export default function Navbar() {
           <Logo />
         </div>
         <ul className={styles.menu}>
-          <li className={!currentSegment && styles.active}>
+          <li className={!currentSegment ? styles.active : undefined}>
             <Link to={`/dashboard/${idSystem}/`}>
               <Home />
             </Link>
           </li>
-          <li className={currentSegment === "clientes" && styles.active}>
+          <li
+            className={
+              currentSegment === "clientes" ? styles.active : undefined
+            }
+          >
             <Link to={`/dashboard/${idSystem}/clientes`}>
               <Clients />
             </Link>
