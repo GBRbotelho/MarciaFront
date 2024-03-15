@@ -1,0 +1,98 @@
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 1165px;
+  height: 466px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #60007d;
+}
+
+.container {
+  width: 91%;
+  height: 93%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h2 {
+  font-size: 26px;
+}
+
+.title button {
+  height: min-content;
+  background-color: #ffffff;
+  border: 0;
+  color: #60007d;
+  font-size: 23px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.title button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.inputs {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+}
+
+.buttons {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.buttons button {
+  font-size: 21px;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.create {
+  background-color: #46cc6b;
+  border: 0;
+  padding: 10px 40px;
+}
+
+.back {
+  background-color: #60007d;
+  border: 0;
+  padding: 10px 20px;
+}

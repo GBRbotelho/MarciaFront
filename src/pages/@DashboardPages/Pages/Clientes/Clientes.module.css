@@ -4,6 +4,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
 }
 
 .content section {
@@ -51,6 +52,7 @@
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  gap: 5px;
 }
 
 .buttonFilter {
@@ -75,6 +77,7 @@
 
 .buttonFilter svg {
   width: 28px;
+  height: min-content;
 }
 
 .containerTable {

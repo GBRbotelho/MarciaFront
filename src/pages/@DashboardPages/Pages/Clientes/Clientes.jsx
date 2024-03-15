@@ -4,9 +4,12 @@ import styles from "./Clientes.module.css";
 import Filtros from "../../../../components/icons/Table/Filtros";
 import View from "../../../../components/icons/Table/View";
 import Delete from "../../../../components/icons/Table/Delete";
+import Plus from "../../../../components/icons/Plus";
+import AddClient from "./components/AddClient";
 
 export default function Clientes() {
   const [activeFilter, setActiveFilter] = useState("Todos");
+  const [activeAdd, setActiveAdd] = useState(false);
 
   const handleClickFilter = (filter) => {
     setActiveFilter(filter);
@@ -30,8 +33,13 @@ export default function Clientes() {
         </div>
         <div className={styles.tableOptions}>
           <button className={styles.buttonFilter}>
-            {" "}
             <Filtros />
+          </button>
+          <button
+            className={styles.buttonFilter}
+            onClick={() => setActiveAdd(true)}
+          >
+            <Plus />
           </button>
         </div>
         <div className={styles.containerTable}>
@@ -73,6 +81,7 @@ export default function Clientes() {
           </table>
         </div>
       </section>
+      {activeAdd && <AddClient setState={setActiveAdd} />}
     </div>
   );
 }

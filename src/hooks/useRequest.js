@@ -1,6 +1,6 @@
 const ROTA = import.meta.env.VITE_ROTA;
 
-export async function usePost(subroute, dataPost) {
+export async function usePost(subroute, dataPost, systemDb = "@system") {
   const token = localStorage.getItem("token");
   try {
     const response = await fetch(`${ROTA}/${subroute}`, {
@@ -8,6 +8,7 @@ export async function usePost(subroute, dataPost) {
       headers: {
         "Content-Type": "application/json",
         Authorization: `${token}`,
+        "sistema-id": systemDb,
       },
       body: JSON.stringify(dataPost),
     });
@@ -18,7 +19,7 @@ export async function usePost(subroute, dataPost) {
   } catch (error) {}
 }
 
-export async function useGet(subroute) {
+export async function useGet(subroute, systemDb = "@system") {
   const token = localStorage.getItem("token");
   try {
     const response = await fetch(`${ROTA}/${subroute}`, {
@@ -26,6 +27,7 @@ export async function useGet(subroute) {
       headers: {
         "Content-Type": "application/json",
         Authorization: `${token}`,
+        "system-db": systemDb,
       },
     });
 
