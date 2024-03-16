@@ -27,7 +27,7 @@ export async function useGet(subroute, systemDb = "@system") {
       headers: {
         "Content-Type": "application/json",
         Authorization: `${token}`,
-        "system-db": systemDb,
+        "sistema-id": systemDb,
       },
     });
 

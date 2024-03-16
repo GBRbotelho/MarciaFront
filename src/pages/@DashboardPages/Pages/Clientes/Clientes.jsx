@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Clientes.module.css";
 
 import Filtros from "../../../../components/icons/Table/Filtros";
@@ -6,10 +6,20 @@ import View from "../../../../components/icons/Table/View";
 import Delete from "../../../../components/icons/Table/Delete";
 import Plus from "../../../../components/icons/Plus";
 import AddClient from "./components/AddClient";
+import { useSystem } from "../../context/SystemContext";
 
 export default function Clientes() {
+  const pathSegments = location.pathname.split("/");
+  const { clients, setClients, reload } = useSystem();
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [activeAdd, setActiveAdd] = useState(false);
+
+  useEffect(() => {
+    const GetClientsData = async () => {
+      reload(setClients, "api/tenant/clients", pathSegments[2]);
+    };
+    GetClientsData();
+  }, []);
 
   const handleClickFilter = (filter) => {
     setActiveFilter(filter);
@@ -55,28 +65,27 @@ export default function Clientes() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Pedro Souza</td>
-                <td>502.308.777-81</td>
-                <td>(19) 9 8171-0543</td>
-                <td>pedro@marcia.com</td>
-                <td>23/05/2023</td>
-                <td>
-                  <View />
-                  <Delete />
-                </td>
-              </tr>
-              <tr>
-                <td>Pedro Souza</td>
-                <td>502.308.777-81</td>
-                <td>(19) 9 8171-0543</td>
-                <td>pedro@marcia.com</td>
-                <td>23/05/2023</td>
-                <td>
-                  <View />
-                  <Delete />
-                </td>
-              </tr>
+              {clients.length > 0 ? (
+                clients.map((client) => {
+                  return (
+                    <tr key={client._id}>
+                      <td>{client.name}</td>
+                      <td>{client.cpf}</td>
+                      <td>{client.phone}</td>
+                      <td>{client.email}</td>
+                      <td>{client.birthday}</td>
+                      <td>
+                        <View />
+                        <Delete />
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td colSpan="6">Não há clientes cadastrados</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

@@ -9,7 +9,6 @@ export default function SetaDireta() {
       viewBox="0 0 375 375"
       height="500"
       preserveAspectRatio="xMidYMid meet"
-      xmlnsV="https://vecta.io/nano"
     >
       <defs>
         <clipPath id="A">

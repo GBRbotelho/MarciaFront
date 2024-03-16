@@ -10,7 +10,7 @@ export default function Column({ background = "#f5eaf8", data = [] }) {
         {data &&
           data.length > 0 &&
           data.map((object) => {
-            return <Card data={object} />;
+            return <Card key={object.id} data={object} />;
           })}
       </div>
     </div>

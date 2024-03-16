@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import styles from "./AddClient.module.css";
 import Input from "./Input";
 import { usePost } from "../../../../../hooks/useRequest";
+import { useSystem } from "../../../context/SystemContext";
 
 export default function AddClient({ setState }) {
   const pathSegments = location.pathname.split("/");
+  const { setClients, reload } = useSystem();
+
   const [client, setClient] = useState({
     name: "",
     civilName: "",
@@ -24,6 +27,7 @@ export default function AddClient({ setState }) {
     );
 
     if (response.success) {
+      await reload(setClients, "api/tenant/clients", pathSegments[2]);
       setState(false);
     }
   };

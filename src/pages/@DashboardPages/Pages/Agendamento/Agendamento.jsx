@@ -65,44 +65,15 @@ export default function Agendamento() {
           <Column
             data={[
               {
+                id: "1",
                 status: "CONFIRMADA",
                 timeInicial: "10:00",
                 timeFinal: "11:00",
                 name: "João Pereira Araujo",
               },
               {
+                id: "2",
                 status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
                 timeInicial: "10:00",
                 timeFinal: "11:00",
                 name: "João Pereira Araujo",
@@ -113,81 +84,14 @@ export default function Agendamento() {
             background="#ffffff"
             data={[
               {
+                id: "1",
                 status: "CONFIRMADA",
                 timeInicial: "10:00",
                 timeFinal: "11:00",
                 name: "João Pereira Araujo",
               },
               {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-            ]}
-          />
-          <Column
-            data={[
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-            ]}
-          />
-          <Column
-            background="#ffffff"
-            data={[
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
+                id: "2",
                 status: "CONFIRMADA",
                 timeInicial: "10:00",
                 timeFinal: "11:00",
@@ -195,91 +99,11 @@ export default function Agendamento() {
               },
             ]}
           />
-          <Column
-            data={[
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "CONFIRMADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-            ]}
-          />
-          <Column
-            background="#ffffff"
-            data={[
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-            ]}
-          />
-          <Column
-            data={[
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-              {
-                status: "AGENDADA",
-                timeInicial: "10:00",
-                timeFinal: "11:00",
-                name: "João Pereira Araujo",
-              },
-            ]}
-          />
+          <Column />
+          <Column background="#ffffff" />
+          <Column />
+          <Column background="#ffffff" />
+          <Column />
         </div>
       </section>
     </div>

@@ -8,11 +8,14 @@ export const useSystem = () => {
 };
 
 export const SystemProvider = ({ children }) => {
+  const pathSegments = location.pathname.split("/");
+
+  //Data
   const [system, setSystem] = useState({});
+  const [clients, setClients] = useState([]);
 
   useEffect(() => {
     const getDataSystem = async () => {
-      const pathSegments = location.pathname.split("/");
       const response = await useGet(`api/companies/${pathSegments[2]}`);
       setSystem(response.data);
     };
@@ -20,8 +23,25 @@ export const SystemProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log(system);
-  }, [system]);
+    console.log(clients);
+  }, [clients]);
 
-  return <SystemContext.Provider value={{}}>{children}</SystemContext.Provider>;
+  const reload = async (setState, subroute, db = "@system") => {
+    const data = await useGet(subroute, db);
+    setState(data.data);
+  };
+
+  return (
+    <SystemContext.Provider
+      value={{
+        system,
+        setSystem,
+        clients,
+        setClients,
+        reload,
+      }}
+    >
+      {children}
+    </SystemContext.Provider>
+  );
 };
