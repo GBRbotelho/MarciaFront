@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./AddClient.module.css";
 import Input from "./Input";
+import { usePost } from "../../../../../hooks/useRequest";
 
 export default function AddClient({ setState }) {
+  const pathSegments = location.pathname.split("/");
   const [client, setClient] = useState({
     name: "",
     civilName: "",
@@ -13,6 +15,18 @@ export default function AddClient({ setState }) {
     email: "",
     knowMyWork: "",
   });
+
+  const handleClick = async () => {
+    const response = await usePost(
+      "api/tenant/clients",
+      client,
+      pathSegments[2]
+    );
+
+    if (response.success) {
+      setState(false);
+    }
+  };
 
   return (
     <div className={styles.main}>
@@ -80,7 +94,9 @@ export default function AddClient({ setState }) {
             /> */}
           </div>
           <div className={styles.buttons}>
-            <button className={styles.create}>Criar cliente</button>
+            <button className={styles.create} onClick={handleClick}>
+              Criar cliente
+            </button>
             <button className={styles.back} onClick={() => setState(false)}>
               Voltar
             </button>

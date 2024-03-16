@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import ProtectRoute from "./ProtectRoute";
 import NewSystem from "../pages/NewSystem/NewSystem";
 import DashboardRoutes from "./DashboardRoutes";
+import { SystemProvider } from "../pages/@DashboardPages/context/SystemContext";
 
 function Routes() {
   return (
@@ -38,7 +39,14 @@ function Routes() {
           </ProtectRoute>
         }
       />
-      <Route path="/dashboard/:id/*" element={<DashboardRoutes />} />
+      <Route
+        path="/dashboard/:id/*"
+        element={
+          <SystemProvider>
+            <DashboardRoutes />
+          </SystemProvider>
+        }
+      />
     </Router>
   );
 }
