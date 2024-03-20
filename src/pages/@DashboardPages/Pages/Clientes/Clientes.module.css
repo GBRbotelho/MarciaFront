@@ -120,25 +120,38 @@
   text-align: center;
 }
 
-.containerTable tbody td svg {
+.containerTable tbody td button {
+  background-color: #f5eaf8;
+  border: 0;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.containerTable tbody td button:last-child {
+  background-color: #f5eaf8;
+  border: 0;
+  padding: 0;
+}
+
+.containerTable tbody td button svg {
   width: 28px;
   height: min-content;
-  padding: 0 10px;
   transition: 0.2s;
-  cursor: pointer;
   transform: scale(1.2);
 }
 
-.containerTable tbody td svg:last-child {
+.containerTable tbody td button:last-child svg {
   width: 19px;
   height: min-content;
   transform: scale(1.4);
 }
 
-.containerTable tbody td svg:hover {
-  transform: scale(1.3);
+.containerTable tbody td button svg:hover {
+  transform: scale(1.4);
+  cursor: pointer;
 }
 
-.containerTable tbody td svg:last-child:hover {
-  transform: scale(1.5);
+.containerTable tbody td button:last-child svg:hover {
+  transform: scale(1.7);
+  cursor: pointer;
 }

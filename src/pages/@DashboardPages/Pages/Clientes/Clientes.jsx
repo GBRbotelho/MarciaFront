@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Clientes.module.css";
+import { Link } from "react-router-dom";
 
 import Filtros from "../../../../components/icons/Table/Filtros";
 import View from "../../../../components/icons/Table/View";
@@ -7,6 +8,7 @@ import Delete from "../../../../components/icons/Table/Delete";
 import Plus from "../../../../components/icons/Plus";
 import AddClient from "./components/AddClient";
 import { useSystem } from "../../context/SystemContext";
+import { useDelete } from "../../../../hooks/useRequest";
 
 export default function Clientes() {
   const pathSegments = location.pathname.split("/");
@@ -23,6 +25,13 @@ export default function Clientes() {
 
   const handleClickFilter = (filter) => {
     setActiveFilter(filter);
+  };
+
+  const handleDeleteClient = async (id) => {
+    const response = await useDelete("api/tenant/clients", id, pathSegments[2]);
+    if (response.success) {
+      await reload(setClients, "api/tenant/clients", pathSegments[2]);
+    }
   };
 
   return (
@@ -75,8 +84,16 @@ export default function Clientes() {
                       <td>{client.email}</td>
                       <td>{client.birthday}</td>
                       <td>
-                        <View />
-                        <Delete />
+                        <button>
+                          <Link
+                            to={`/dashboard/${pathSegments[2]}/clientes/${client._id}`}
+                          >
+                            <View />
+                          </Link>
+                        </button>
+                        <button onClick={() => handleDeleteClient(client._id)}>
+                          <Delete />
+                        </button>
                       </td>
                     </tr>
                   );

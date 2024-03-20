@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+}
+
+.container h2 {
+  font-size: 21px;
+  margin: 10px 0px;
+}
+
+.formBasic {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px;
+}

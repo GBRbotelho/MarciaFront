@@ -3,6 +3,7 @@ import DashboardLayout from "../pages/@DashboardPages/DashboardLayout";
 import Agendamento from "../pages/@DashboardPages/Pages/Agendamento/Agendamento";
 import ProtectRoute from "./ProtectRoute";
 import Clientes from "../pages/@DashboardPages/Pages/Clientes/Clientes";
+import ViewCliente from "../pages/@DashboardPages/Pages/ViewCliente/ViewCliente";
 
 function DashboardRoutes() {
   return (
@@ -23,6 +24,16 @@ function DashboardRoutes() {
           <ProtectRoute>
             <DashboardLayout>
               <Clientes />
+            </DashboardLayout>
+          </ProtectRoute>
+        }
+      />
+      <Route
+        path="/clientes/:id"
+        element={
+          <ProtectRoute>
+            <DashboardLayout>
+              <ViewCliente />
             </DashboardLayout>
           </ProtectRoute>
         }
